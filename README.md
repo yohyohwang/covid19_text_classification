@@ -8,42 +8,6 @@ The goal of this project is to correctly classify studies' label(s) based on the
 
 We compared the following 3 models 
 
-1. Naive Bayes (baseline) 
-2. CNN 
-3. RNN (alternative model)
-
-**Project Steps**
-
-1. Clean the data
-
-    - Combine provided test.csv, valid.csv, and train.csv into a single csv and re-split. 
-
-2. EDA
-
-    - Explore how are words within the inputs clustering.
-
-    - Identify the most frequent wordsin the corpus.
-
-3. Preprocess 
-
-- Tokenize words: **Yohyoh, 4/1**
-
-- Generate word embeddings (word2vec): **Yohyoh, 4/1 (Max hops on if available)**
-
-- Named entity Recognition (unknown) : **Max**
-
-### Train models 
-
-- Train Naive Bayes (baseline model): **Yohyoh, 4/4**
-
-- CNN (our model): **Yohyoh, 4/4**
-
-- RNN (or another alternative model, add transformer?): **Max, 4/4**
-
-### Quantitative evaluation of each model
-
-- Multilabel classifiers use a [confusion matrix for each label](https://towardsdatascience.com/evaluating-multi-label-classifiers-a31be83da6ea). Report accuracy, precision, recall, F1: **Max/Yohyoh for each model**
-
-- Generate an AUC curve: **Max/Yohyoh for each model**
-
-- tSNE with clusters - compare between predicted vs. actual: **Max/Yohyoh for each model**
+1. Multinomial Naive Bayes (baseline) 
+2. Support Vector Machine trained on Word2Vec embeddings
+3. Support Vector Machine trained on TF-IDF vectors
